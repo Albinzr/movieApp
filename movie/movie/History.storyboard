@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="peb-iH-5c6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--History Table Controller-->
+        <scene sceneID="1nU-ii-tES">
+            <objects>
+                <viewController storyboardIdentifier="historyUI" automaticallyAdjustsScrollViewInsets="NO" id="peb-iH-5c6" customClass="HistoryTableController" customModule="movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J8B-wV-c0U"/>
+                        <viewControllerLayoutGuide type="bottom" id="ha4-EE-bAL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BvM-lz-dQB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bwc-mK-dbB">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="peb-iH-5c6" id="NLG-LA-pMZ"/>
+                                    <outlet property="delegate" destination="peb-iH-5c6" id="Trp-LG-cjz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bwc-mK-dbB" firstAttribute="top" secondItem="J8B-wV-c0U" secondAttribute="bottom" id="CD6-bq-QGt"/>
+                            <constraint firstItem="ha4-EE-bAL" firstAttribute="top" secondItem="bwc-mK-dbB" secondAttribute="bottom" id="YJ0-5T-a56"/>
+                            <constraint firstItem="bwc-mK-dbB" firstAttribute="leading" secondItem="BvM-lz-dQB" secondAttribute="leading" id="daL-tk-i5S"/>
+                            <constraint firstAttribute="trailing" secondItem="bwc-mK-dbB" secondAttribute="trailing" id="wKe-y1-Akv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="histortTableView" destination="bwc-mK-dbB" id="RRh-dc-gc1"/>
+                        <segue destination="Xg7-sQ-7TR" kind="show" identifier="showMovie" id="Zyr-Z7-AsN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VKQ-vN-dV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="381"/>
+        </scene>
+        <!--movieUI-->
+        <scene sceneID="aXz-xR-f00">
+            <objects>
+                <viewControllerPlaceholder storyboardName="movie" referencedIdentifier="movieUI" id="Xg7-sQ-7TR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaU-KP-iQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081.5" y="137"/>
+        </scene>
+    </scenes>
+</document>
